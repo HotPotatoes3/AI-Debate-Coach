@@ -1,33 +1,33 @@
-import { useState } from "react";
-import CoachSprite from "./CoachSprite";
-import ResolutionInput from "./ResolutionInput";
-
-interface StartScreenProps {
+type Props = {
   onStart: (resolution: string) => void;
-}
+};
 
-const StartScreen = ({ onStart }: StartScreenProps) => {
-  const [resolution, setResolution] = useState("");
-
-  const handleStart = () => {
-    if (!resolution.trim()) return;
-    onStart(resolution);
-  };
-
+const StartScreen = ({ onStart }: Props) => {
   return (
-    <div className="start-screen">
-      <CoachSprite />
-
+    <div>
       <h1 className="title">AI Debate Coach</h1>
-      <p className="subtitle">
-        Enter a resolution and prepare to defend your position.
-      </p>
+      <p className="subtitle">Enter a resolution to begin</p>
 
-      <ResolutionInput
-        value={resolution}
-        onChange={setResolution}
-        onSubmit={handleStart}
-      />
+      <div className="resolution-input">
+        <input
+          placeholder="Resolved: ..."
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              onStart(e.currentTarget.value);
+            }
+          }}
+        />
+        <button
+          onClick={() => {
+            const input = document.querySelector(
+              ".resolution-input input"
+            ) as HTMLInputElement;
+            onStart(input.value);
+          }}
+        >
+          Start
+        </button>
+      </div>
     </div>
   );
 };
