@@ -1,0 +1,43 @@
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.sprite-container {
+  width: 160px;
+  height: 160px;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.resolution-input {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.resolution-input input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
