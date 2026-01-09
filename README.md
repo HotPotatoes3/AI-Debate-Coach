@@ -154,26 +154,3 @@ http://localhost:5173
 
 ---
 
-## 📌 Status
-
-🚧 **Active development**
-UI foundation complete. Backend, AI integration, and voice features are next.
-
----
-
-## 📄 License
-
-MIT (or hackathon-specific license TBD)
-
-```
-
----
-
-If you want next:
-- 🏗 Architecture diagram
-- 🧠 Gemini prompt design
-- 📊 Datadog observability plan (VERY hackathon-strong)
-- 🎙 Voice agent flow
-
-Just tell me what to build next.
-```
